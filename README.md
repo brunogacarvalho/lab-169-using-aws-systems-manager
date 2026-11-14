@@ -58,7 +58,7 @@ Essa atividade demonstrou como acessar e administrar uma instância sem utilizar
 
 Acesse a página com o resumo visual do laboratório e os flashcards interativos para revisar os principais conceitos:
 
-**[Acessar GitHub Pages](LINK_DA_GITHUB_PAGES)**
+**[Acessar GitHub Pages](https://brunogacarvalho.github.io/lab-169-using-aws-systems-manager/)**
 
 ## Créditos
 
