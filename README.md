@@ -1,4 +1,4 @@
-# Lab 169 - Usando o AWS Systems Manager
+# Lab 6 - Lab 169 - Usando o AWS Systems Manager
 
 ## Visão geral
 
