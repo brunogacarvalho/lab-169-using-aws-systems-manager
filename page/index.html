@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lab 169 - Aprendizado prático sobre AWS Systems Manager.">
+    <title>Lab 169 - AWS Systems Manager | Bruno Carvalho</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero">
+    <div class="container">
+        <span class="lab-tag">AWS CLOUD LABS</span>
+        <h1>Usando o AWS Systems Manager</h1>
+        <p class="subtitle">Lab 169 - Administração e gerenciamento de instâncias EC2</p>
+        <p class="intro">
+            Neste laboratório, explorei recursos do AWS Systems Manager para
+            administrar uma instância EC2, executar comandos remotamente,
+            armazenar parâmetros e acessar o terminal sem utilizar SSH.
+        </p>
+        <div class="hero-tags">
+            <span>AWS Systems Manager</span>
+            <span>Amazon EC2</span>
+            <span>Cloud Management</span>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="section-label">PRÁTICA</span>
+            <h2>O que foi realizado</h2>
+            <p>As principais atividades desenvolvidas durante o laboratório.</p>
+        </div>
+
+        <div class="activity-grid">
+
+            <article class="activity-card">
+                <div class="card-number">01</div>
+                <h3>Fleet Manager - Inventory</h3>
+                <p>
+                    Criação de uma associação de inventário e consulta das
+                    informações coletadas sobre a instância gerenciada,
+                    incluindo os aplicativos instalados.
+                </p>
+                <span class="topic-tag">Inventário</span>
+            </article>
+
+            <article class="activity-card">
+                <div class="card-number">02</div>
+                <h3>Run Command</h3>
+                <p>
+                    Execução remota do documento Install Dashboard App,
+                    instalação dos componentes da aplicação e verificação
+                    do resultado da execução.
+                </p>
+                <span class="topic-tag">Execução remota</span>
+            </article>
+
+            <article class="activity-card">
+                <div class="card-number">03</div>
+                <h3>Parameter Store</h3>
+                <p>
+                    Criação de um parâmetro do tipo String para habilitar
+                    um recurso beta do Dashboard, exibindo um terceiro gráfico.
+                </p>
+                <span class="topic-tag">Gerenciamento de parâmetros</span>
+            </article>
+
+            <article class="activity-card">
+                <div class="card-number">04</div>
+                <h3>Session Manager</h3>
+                <p>
+                    Acesso ao terminal da instância EC2, execução de comandos
+                    Linux e consultas utilizando a AWS CLI, sem conexão SSH.
+                </p>
+                <span class="topic-tag">Acesso remoto</span>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="section-label">APRENDIZADO</span>
+            <h2>Principais conhecimentos</h2>
+            <p>Conceitos e recursos praticados neste laboratório.</p>
+        </div>
+
+        <div class="learning-list">
+            <div class="learning-item">
+                <span class="check">✓</span>
+                <p>Consultar informações de inventário de instâncias gerenciadas.</p>
+            </div>
+            <div class="learning-item">
+                <span class="check">✓</span>
+                <p>Executar comandos remotamente em uma instância EC2.</p>
+            </div>
+            <div class="learning-item">
+                <span class="check">✓</span>
+                <p>Armazenar configurações de aplicações no Parameter Store.</p>
+            </div>
+            <div class="learning-item">
+                <span class="check">✓</span>
+                <p>Acessar uma instância pelo Session Manager sem utilizar SSH.</p>
+            </div>
+            <div class="learning-item">
+                <span class="check">✓</span>
+                <p>Utilizar comandos Linux e AWS CLI durante uma sessão remota.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section flashcard-section">
+        <div class="section-heading">
+            <span class="section-label">REVISÃO</span>
+            <h2>Teste seus conhecimentos</h2>
+            <p>8 flashcards interativos para revisar os conceitos do Lab 169.</p>
+        </div>
+
+        <div class="flashcard-area">
+
+            <div class="flashcard-counter" id="card-counter">1 / 8</div>
+
+            <div class="flashcard-single">
+                <span class="card-hint" id="card-label">PERGUNTA</span>
+                <h3 id="card-question"></h3>
+                <p id="card-answer" hidden></p>
+                <button id="show-answer" type="button">Mostrar resposta</button>
+            </div>
+
+            <div class="flashcard-navigation">
+                <button id="previous-card" type="button">Anterior</button>
+                <button id="next-card" type="button">Próximo</button>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>Lab 169 - Usando o AWS Systems Manager</p>
+        <p>Projeto de aprendizagem em Computação em Nuvem</p>
+        <p class="footer-author">Bruno Carvalho</p>
+    </div>
+</footer>
+
+<script>
+    const cards = [
+        {
+            question: "Qual é a finalidade do AWS Systems Manager?",
+            answer: "Administrar e operar recursos da AWS, incluindo instâncias EC2, por meio de diferentes ferramentas de gerenciamento."
+        },
+        {
+            question: "Para que serve o Fleet Manager?",
+            answer: "Permite visualizar e administrar informações de instâncias gerenciadas, incluindo dados de inventário."
+        },
+        {
+            question: "O que é o Inventory no Systems Manager?",
+            answer: "Recurso que coleta informações sobre as instâncias gerenciadas, como aplicativos instalados e outros dados do sistema."
+        },
+        {
+            question: "Qual é a função do Run Command?",
+            answer: "Executar comandos e documentos de gerenciamento remotamente em instâncias gerenciadas."
+        },
+        {
+            question: "Para que serve o Parameter Store?",
+            answer: "Armazenar e gerenciar parâmetros de configuração e dados utilizados por aplicações e recursos."
+        },
+        {
+            question: "Qual foi a função do parâmetro criado neste laboratório?",
+            answer: "O parâmetro /dashboard/show-beta-features, com valor True, habilitou um terceiro gráfico no Dashboard."
+        },
+        {
+            question: "O que é o Session Manager?",
+            answer: "Permite abrir uma sessão de terminal em instâncias gerenciadas sem depender de uma conexão SSH tradicional."
+        },
+        {
+            question: "Qual é uma vantagem do Session Manager em relação ao SSH?",
+            answer: "Permite acessar a instância sem chaves SSH ou abrir uma porta de entrada para SSH no Security Group."
+        }
+    ];
+
+    let currentCard = 0;
+    let showingAnswer = false;
+
+    const counter = document.getElementById("card-counter");
+    const question = document.getElementById("card-question");
+    const answer = document.getElementById("card-answer");
+    const label = document.getElementById("card-label");
+    const showButton = document.getElementById("show-answer");
+
+    function renderCard() {
+        const card = cards[currentCard];
+
+        counter.textContent = `${currentCard + 1} / ${cards.length}`;
+        question.textContent = card.question;
+        answer.textContent = card.answer;
+
+        showingAnswer = false;
+        question.hidden = false;
+        answer.hidden = true;
+        label.textContent = "PERGUNTA";
+        showButton.textContent = "Mostrar resposta";
+    }
+
+    showButton.addEventListener("click", () => {
+        showingAnswer = !showingAnswer;
+
+        question.hidden = showingAnswer;
+        answer.hidden = !showingAnswer;
+        label.textContent = showingAnswer ? "RESPOSTA" : "PERGUNTA";
+        showButton.textContent = showingAnswer ? "Ver pergunta" : "Mostrar resposta";
+    });
+
+    document.getElementById("previous-card").addEventListener("click", () => {
+        currentCard = (currentCard - 1 + cards.length) % cards.length;
+        renderCard();
+    });
+
+    document.getElementById("next-card").addEventListener("click", () => {
+        currentCard = (currentCard + 1) % cards.length;
+        renderCard();
+    });
+
+    renderCard();
+</script>
+
+</body>
+</html>
